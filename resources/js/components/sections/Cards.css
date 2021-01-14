@@ -1,0 +1,47 @@
+/*********************************
+6. Cards
+*********************************/
+
+.cards {
+  z-index: 1;
+  margin-top: -70px;
+}
+.card {
+  height: 100%;
+  padding: 37px;
+  border-radius: 2%;
+  margin: 2px;
+}
+
+.card--custom:nth-child(3n + 1) section {
+  background: #910000;
+}
+.card--custom:nth-child(3n + 2) section {
+  background: #a06d00;
+}
+.card--custom:nth-child(3n) section {
+  background: #262626;
+}
+
+.card-icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+.card-icon img {
+  max-width: 100%;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+}
+.card-text {
+  margin-top: 20px;
+}
+.card-text p {
+  text-indent: 3rem;
+  color: #ffffff;
+}
