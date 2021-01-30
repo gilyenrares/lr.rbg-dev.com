@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaList, FaCogs, FaUser, FaBars, FaTimes } from 'react-icons/fa';
+import { IoHome } from 'react-icons/io5';
+import { MdContactMail } from 'react-icons/md';
+import { BsInfoSquareFill } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
 import { Navbar } from 'react-bootstrap';
 
 function Navigation() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [modalShow, setModalShow] = React.useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -48,7 +52,7 @@ function Navigation() {
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <li className='nav-item'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                  Home
+                 <IoHome /> Home
                 </Link>
               </li>
               <li className='nav-item'>
@@ -57,7 +61,7 @@ function Navigation() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  About
+                  <BsInfoSquareFill /> About
                 </Link>
               </li>
               <li className='nav-item'>
@@ -66,7 +70,7 @@ function Navigation() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Services
+                  <FaCogs />Services
                 </Link>
               </li>
               <li className='nav-item'>
@@ -75,7 +79,7 @@ function Navigation() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Projects
+                  <FaList />Projects
                 </Link>
               </li>
               <li className='nav-item'>
@@ -84,23 +88,17 @@ function Navigation() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Contact
+                  <MdContactMail /> Contact
                 </Link>
               </li>
               <li className='nav-btn'>
                 {button ? (
                   <Link to='/sign-up'>
-                    <Button buttonStyle='btn--danger' buttonSize='btn--medium'>SIGN UP</Button>
+                    <Button buttonStyle='btn--primary' buttonSize='btn--small'><FaUser /> Account</Button>
                   </Link>
                 ) : (
                   <Link to='/sign-up'>
-                    <Button
-                      buttonStyle='btn--danger'
-                      buttonSize='btn--wide'
-                      onClick={closeMobileMenu}
-                    >
-                      SIGN UP
-                    </Button>
+                    <Button buttonStyle='btn--primary' buttonSize='btn--small'><FaUser /> Account</Button>
                   </Link>
                 )}
               </li>

@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap'
 import { IoMdCall, IoMdMail } from 'react-icons/io';
 import {IoLocationSharp} from 'react-icons/io5'
 import { Button } from '../Button'
-import './ContactForm.css'
+import './Forms.css'
 
 function ContactForm() {
   return (

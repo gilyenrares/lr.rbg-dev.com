@@ -33,6 +33,7 @@ import Projects from './pages/Projects';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/sections/Navigation';
 import Footer from './components/sections/Footer';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path='/services' component={Services} />
         <Route path='/projects' component={Projects} />
         <Route path='/contact' component={Contact} />
+        <Route path='/sign-up' component={Signup} />
       </Switch>
       <Footer />
     </Router>

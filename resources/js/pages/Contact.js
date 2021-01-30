@@ -12,7 +12,6 @@ function Contact() {
       <Jumbotron {...contact} />
       <HeroSection {...contactObjOne} />
       <ContactForm />
-      <MyMap />
       <HeroSection {...contactObjTwo} />
 
     </>
