@@ -8,6 +8,8 @@ import { MdContactMail } from 'react-icons/md';
 import { BsInfoSquareFill } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
 import { Navbar } from 'react-bootstrap';
+import LoginModal from '../modals/LoginModal';
+import AccountModal from '../modals/AccountModal';
 
 function Navigation() {
   const [click, setClick] = useState(false);
@@ -93,9 +95,7 @@ function Navigation() {
               </li>
               <li className='nav-btn'>
                 {button ? (
-                  <Link to='/sign-up'>
-                    <Button buttonStyle='btn--primary' buttonSize='btn--small'><FaUser /> Account</Button>
-                  </Link>
+                  <Button buttonStyle='btn--primary' buttonSize='btn--small' onClick={() => setModalShow(true)}><FaUser /> Account</Button>
                 ) : (
                   <Link to='/sign-up'>
                     <Button buttonStyle='btn--primary' buttonSize='btn--small'><FaUser /> Account</Button>
@@ -105,6 +105,10 @@ function Navigation() {
             </ul>
         </Navbar>
       </IconContext.Provider>
+      <AccountModal 
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
   );
 }
