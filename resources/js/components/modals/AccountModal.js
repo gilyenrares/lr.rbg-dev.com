@@ -10,7 +10,7 @@ import SignupModal from "./SignupModal";
 
 function AccountModal(props) {
     const [loginShow, setLoginShow] = React.useState(false);
-    const [modalShow, setSignupShow] = React.useState(false);
+    const [signupShow, setSignupShow] = React.useState(false);
     return (
         <IconContext.Provider value={{ color: "#fff" }}>
             <Modal {...props} size="lg" aria-labelledby="login-modal" centered>
@@ -51,7 +51,10 @@ function AccountModal(props) {
                 </Modal.Footer>
             </Modal>
             <LoginModal show={loginShow} onHide={() => setLoginShow(false)} />
-            <SignupModal show={modalShow} onHide={() => setSignupShow(false)} />
+            <SignupModal
+                show={signupShow}
+                onHide={() => setSignupShow(false)}
+            />
         </IconContext.Provider>
     );
 }
