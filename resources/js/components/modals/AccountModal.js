@@ -15,12 +15,12 @@ function AccountModal(props) {
         <IconContext.Provider value={{ color: "#fff" }}>
             <Modal {...props} size="lg" aria-labelledby="login-modal" centered>
                 <Modal.Header closeButton>
-                    <Modal.Title id="login-modal">
+                    <Modal.Title className="pb-5" id="login-modal">
                         <FaUser /> Account
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="mx-auto">
-                    <Row className="justify-content-md-center">
+                <Modal.Body className="px-auto">
+                    <Row className="justify-content-center">
                         <Button
                             buttonStyle="btn--primary"
                             buttonSize="btn--wide"
@@ -30,7 +30,7 @@ function AccountModal(props) {
                         </Button>
                     </Row>
                     <hr />
-                    <Row className="justify-content-md-center">
+                    <Row className="justify-content-center">
                         <Button
                             buttonStyle="btn--success"
                             buttonSize="btn--wide"
@@ -40,7 +40,7 @@ function AccountModal(props) {
                         </Button>
                     </Row>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className="pt-5">
                     <Button
                         buttonStyle="btn--danger"
                         buttonSize="btn--small"

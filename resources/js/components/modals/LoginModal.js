@@ -31,10 +31,7 @@ function LoginModal(props) {
                         validated={validated}
                         onSubmit={handleSubmit}
                     >
-                        <Form.Group
-                            className="mb-5"
-                            controlId="validationCustom01"
-                        >
+                        <Form.Group controlId="validationCustom01">
                             <Form.Label>Email</Form.Label>
                             <Form.Control
                                 required
@@ -48,11 +45,11 @@ function LoginModal(props) {
                             <Form.Control.Feedback>
                                 Looks good!
                             </Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">
+                                Please provide a valid email
+                            </Form.Control.Feedback>
                         </Form.Group>
-                        <Form.Group
-                            className="mb-5"
-                            controlId="validationCustom02"
-                        >
+                        <Form.Group controlId="validationCustom02">
                             <Form.Label>Password</Form.Label>
                             <Form.Control
                                 required
@@ -65,6 +62,9 @@ function LoginModal(props) {
                             />
                             <Form.Control.Feedback>
                                 Looks good!
+                            </Form.Control.Feedback>
+                            <Form.Control.Feedback type="invalid">
+                                Please provide a valid password
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group controlId="formBasicCheckbox">

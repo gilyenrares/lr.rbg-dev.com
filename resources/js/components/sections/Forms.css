@@ -5,12 +5,17 @@
     outline: none;
     background: #eff4f6;
     padding-left: 25px;
-    border-left: solid 8px transparent;
+    border-left: solid 8px #eff4f6 !important;
 }
 .c-input:focus,
 .c-input:hover {
-    border-left: solid 8px #b30000;
+    border-left: solid 8px #b30000 !important;
 }
 .c-textarea {
     height: 190px;
+}
+.hno {
+    border-top-right-radius: 0.3rem !important;
+    border-bottom-right-radius: 0.3rem !important;
+    height: inherit !important;
 }

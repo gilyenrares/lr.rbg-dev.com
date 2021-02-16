@@ -1,9 +1,4 @@
 .modal-content {
-    background-image: url("../../images/2.jpg");
-    background-color: rgba(0, 0, 0, 0.4);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     color: #ffffff;
 }
 .close {
@@ -11,7 +6,21 @@
 }
 .modal-header {
     border-bottom: none !important;
+    background-image: url("../../images/top.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.modal-body {
+    background-image: url("../../images/middle.jpg");
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center center;
 }
 .modal-footer {
     border-top: none !important;
+    background-image: url("../../images/bottom.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
