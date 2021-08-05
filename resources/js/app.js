@@ -4,7 +4,7 @@
  * building robust, powerful web applications using React + Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -22,38 +22,33 @@ require('./bootstrap');
 // require('./pages/Contact');
 // require('./pages/Projects');
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './App.css';
-import Index from './pages/Index';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Navigation from './components/sections/Navigation';
-import Footer from './components/sections/Footer';
-import Signup from './pages/Signup';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
+import Index from "./pages/Index";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navigation from "./components/sections/Navigation";
+import Footer from "./components/sections/Footer";
 
 function App() {
-  return (
-    <Router>
-      <Navigation />
-      <Switch>
-        <Route path='/' exact component={Index} />
-        <Route path='/about' component={About} />
-        <Route path='/services' component={Services} />
-        <Route path='/projects' component={Projects} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/sign-up' component={Signup} />
-      </Switch>
-      <Footer />
-    </Router>
-  );
+    return (
+        <Router>
+            <Navigation />
+            <Switch>
+                <Route path="/" exact component={Index} />
+                <Route path="/about" component={About} />
+                <Route path="/services" component={Services} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/contact" component={Contact} />
+            </Switch>
+            <Footer />
+        </Router>
+    );
 }
-if (document.getElementById('root')) {
-  ReactDOM.render(
-    <App />,
-  document.getElementById('root')
-);
+if (document.getElementById("root")) {
+    ReactDOM.render(<App />, document.getElementById("root"));
 }

@@ -30,6 +30,7 @@ function SignupModal(props) {
                         noValidate
                         validated={validated}
                         onSubmit={handleSubmit}
+                        action="{{ route('register') }}"
                     >
                         <Form.Group controlId="vfn">
                             <Form.Label>First name</Form.Label>

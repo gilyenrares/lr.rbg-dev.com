@@ -21,6 +21,7 @@ function AccountModal(props) {
                 </Modal.Header>
                 <Modal.Body className="px-auto">
                     <Row className="justify-content-center">
+                        <LoginModal></LoginModal>
                         <Button
                             buttonStyle="btn--primary"
                             buttonSize="btn--wide"
@@ -50,7 +51,10 @@ function AccountModal(props) {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <LoginModal show={loginShow} onHide={() => setLoginShow(false)} />
+            <LoginModal
+                show={loginShow}
+                onHide={() => setLoginShow(false)}
+            ></LoginModal>
             <SignupModal
                 show={signupShow}
                 onHide={() => setSignupShow(false)}
