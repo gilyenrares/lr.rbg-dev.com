@@ -30,6 +30,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import Dashboard from "./pages/Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/sections/Navigation";
 import Footer from "./components/sections/Footer";
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/services" component={Services} />
                 <Route path="/projects" component={Projects} />
                 <Route path="/contact" component={Contact} />
+                <Route path="/cms" component={Dashboard} />
             </Switch>
             <Footer />
         </Router>

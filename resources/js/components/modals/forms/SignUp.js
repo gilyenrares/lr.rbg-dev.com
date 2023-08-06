@@ -20,7 +20,7 @@ export default class SignUp extends React.Component {
             email: "",
             pw: "",
             rpw: "",
-            tnc: false,
+            tncChecked: false,
             validated: false,
         };
     }
@@ -41,11 +41,23 @@ export default class SignUp extends React.Component {
     }
 
     handleTnC = (event) => {
-        this.setState({ tnc: event.target.checked });
+        this.setState({ tncChecked: event.target.checked });
     };
     render() {
-        const { fn, ln, hn, sn, city, pc, pn, email, pw, rpw, tnc, validated } =
-            this.state;
+        const {
+            fn,
+            ln,
+            hn,
+            sn,
+            city,
+            pc,
+            pn,
+            email,
+            pw,
+            rpw,
+            tncChecked,
+            validated,
+        } = this.state;
         return (
             <Form
                 noValidate
@@ -271,7 +283,7 @@ export default class SignUp extends React.Component {
                             label="I Agree to the "
                             feedback="You must agree before submitting."
                             name="tnc"
-                            checked={tnc}
+                            checked={tncChecked}
                             onChange={this.handleTnC}
                         />
                     </Form.Group>
